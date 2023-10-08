@@ -8,9 +8,11 @@ import { useLocation, useNavigate } from "react-router-dom";
 import axios from '../../../utils/axios.js'
 import { baseUrl } from "../baseUrl.js";
 import { User } from "../../context/UserContext.jsx";
+import LoadingPage from "../../pages/LoadingPage.jsx";
 export default function Loginbtn() {
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
   const [selected, setSelected] = useState("login");
+  const [loading, setLoading] = useState(false); // Add a loading state
   const {userData,setData}=useContext(User)
   const tabRef = useRef();
   const location=useLocation()
@@ -44,12 +46,15 @@ const handleForgetPage=()=>{
       }
     })
   }
+
   const handleSubmit=async()=>{
     try {
       console.log(formData)
+      setLoading(true)
       if(formData.role==="students"){
         const response=await axios.post(`/user/student/signin`,formData)
         console.log(response)
+        setLoading(false)
         setData(response.data)
         localStorage.setItem("role",response.data.role)
        
@@ -103,6 +108,7 @@ const handleForgetPage=()=>{
      
     } catch (error) {
       console.log(error)
+      setLoading(false)
       toast.error(error.response.data.msg)
     }
    
@@ -110,6 +116,12 @@ const handleForgetPage=()=>{
 
   return (
     <>
+      {loading ?
+      (<LoadingPage/>)
+        :
+        (
+      <div>
+
         {location.pathname==="/register/student"?
       <Button onPress={onOpen} variant="light"  color="primary">Login</Button>
         :
@@ -208,6 +220,10 @@ const handleForgetPage=()=>{
           )}
         </ModalContent>
       </Modal>
+      </div>
+      )
+    }
+      
     </>
   );
 }

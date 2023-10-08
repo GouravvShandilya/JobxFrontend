@@ -5,10 +5,12 @@ import axios from '../../utils/axios'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import Nav from "../components/Nav"
+import LoadingPage from './LoadingPage'
 
 
 function EmployeRegisterPage() {
     const navigate=useNavigate()
+    const [loading,setLoading]=useState(false)
     const [formData,setFormData]=useState({
         email:"",
         password:"",
@@ -33,13 +35,15 @@ function EmployeRegisterPage() {
     const handleSubmit=async(e)=>{
         try {
             e.preventDefault()
+            setLoading(true)
             const response=await axios.post(`/employe/signup`,formData)
             console.log(response)
-            
+            setLoading(false)
             sessionStorage.setItem("user",JSON.stringify(response.data))
             navigate("/")
             // console.log(sessionStorage.getItem("user"))
         } catch (error) {
+            setLoading(false)
             toast.error(error.response.data.msg)
            
             
@@ -87,7 +91,18 @@ function EmployeRegisterPage() {
                         <p>By signing up, you agree to our Terms and Conditions.</p>
                         <div className='w-full  flex items-center justify-center'>
 
+                        {loading?
+                            (
+                            <LoadingPage/>
+
+                            )
+                            :
+                            (
                             <button className='w-9/12 bg-[#008BDC] mx-auto p-2 text-white'>Sign up</button>
+
+                            )
+
+                            }
                         </div>
                         <p className=' text-center'>Already registered? <span><Loginbtn /></span></p>
                     </form>
