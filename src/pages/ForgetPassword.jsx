@@ -22,6 +22,7 @@ function ForgetPassword() {
         axios.post("/user/student/send-mail",form)
         .then((response)=>{
             console.log(response)
+            toast.success(response.data.mes)
         })
         .catch(err=>{console.log(err)
             toast.error(err.response.data.msg)
