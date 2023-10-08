@@ -1,6 +1,7 @@
 {
   "name": "intershala",
   "private": true,
+  "proxy":"https://nice-pear-peacock-tutu.cyclic.app",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
