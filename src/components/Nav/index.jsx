@@ -73,15 +73,16 @@ export default function App() {
         <NavbarMenuToggle />
       </NavbarContent>
 
-      <NavbarContent className="sm:hidden pr-3" justify="center">
+      <NavbarContent className="sm:hidden pr-3 " justify="center">
         <NavbarBrand>
           
-          <p className="font-bold text-inherit">FindX</p>
+        <NavLink to="/" className="font-bold text-inherit">Find<span className=" text-yellow-400">X</span></NavLink>
+          
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarBrand>
+        <NavbarBrand>   
            
           <NavLink to="/" className="font-bold text-inherit">Find<span className=" text-yellow-400">X</span></NavLink>
         </NavbarBrand>
@@ -149,8 +150,8 @@ export default function App() {
 
         {userdets &&
 
-        <div>
-        <Dropdown placement="bottom-end">
+        <div className=" relative">
+        <Dropdown placement="bottom-end" className="  absolute -left-[200px]">
         <DropdownTrigger>
          {userprofile?
          (

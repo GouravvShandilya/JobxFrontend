@@ -75,7 +75,7 @@ function StudentInternshipPage() {
             )
             :
             (
-                <div className=' p-4'>
+                <div className=' p-4  '>
 
                 <div>
 
@@ -97,7 +97,7 @@ function StudentInternshipPage() {
                     </div>
 
 
-                    <div className='w-[100%] flex items-start flex-wrap mt-4  gap-4'>
+                    <div className='w-[100%] flex items-start flex-wrap mt-4  gap-4 bg-red-400'>
 
                         {internships?.reverse().map((intern, index) => {
                             return <InternshipStudentCard key={index} dets={intern} />
