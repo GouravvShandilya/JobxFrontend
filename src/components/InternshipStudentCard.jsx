@@ -12,7 +12,7 @@ export default function InternshipStudentCard({dets}) {
 
 
   return (
-    <Card className=" border rounded-sm min-w-[470px] ml-4">
+    <Card className=" border rounded-sm min-w-[470px] mx-auto">
       <CardHeader className="flex gap-3">
         <div className=" w-[40px] h-[40px] overflow-hidden rounded-[100px]">
             <img  
