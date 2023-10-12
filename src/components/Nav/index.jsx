@@ -38,6 +38,8 @@ export default function App() {
   const handleLogout=async()=>{
     const response=await axios.post("/user/student/signout")
     sessionStorage.clear("user")
+   
+   
     console.log(response)
     navigate("/")
 
@@ -68,7 +70,7 @@ export default function App() {
 
   }
   return (
-    <Navbar disableAnimation isBordered>
+    <Navbar  isBordered>
       <NavbarContent className="sm:hidden" justify="start">
         <NavbarMenuToggle />
       </NavbarContent>

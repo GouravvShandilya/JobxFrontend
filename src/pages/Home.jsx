@@ -4,6 +4,7 @@ import { TypeAnimation } from 'react-type-animation';
 import { useNavigate } from 'react-router-dom';
 import LatestInternships from '../components/LatestInternships';
 import BannerPart from '../components/BannerPart';
+import LatestJobs from '../components/LatestJobs';
 function Home() {
   const navigate = useNavigate()
   return (
@@ -52,6 +53,9 @@ function Home() {
       </div>
       <div>
         <BannerPart/>
+      </div>
+      <div className='mt-4'>
+            <LatestJobs/>
       </div>
     </div>
   )

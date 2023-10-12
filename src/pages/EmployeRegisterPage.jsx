@@ -39,6 +39,11 @@ function EmployeRegisterPage() {
             const response=await axios.post(`/employe/signup`,formData)
             console.log(response)
             setLoading(false)
+            if(response){
+                setTimeout(() => {
+                    toast.success("Now you can Login!!")
+                }, 1);
+            }
             sessionStorage.setItem("user",JSON.stringify(response.data))
             navigate("/")
             // console.log(sessionStorage.getItem("user"))

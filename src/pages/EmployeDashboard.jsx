@@ -3,21 +3,27 @@ import Nav from "../components/Nav"
 import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell} from "@nextui-org/react";
 import axios from '../../utils/axios';
 import { Link } from 'react-router-dom';
+import LoadingPage from './LoadingPage';
 
 function EmployeDashboard() {
     const [allListing,setAllListing]=useState([])
     console.log(allListing)
+    const [loading,setLoading]=useState(false)
     useEffect(()=>{
+      setLoading(true)
         axios.get("/employe/getalllisting")
         .then((res)=>{
             console.log(res)
+            
             const allinternships=res.data.employe.interships ||  []
             const alljobs=res.data.employe.jobs ||  []
             // console.log(alljobs)
             setAllListing([...allinternships,...alljobs])
+            setLoading(false)
 
         })
         .catch((err)=>{
+          setLoading(false)
             console.log(err)
         })
     },[])
@@ -34,7 +40,9 @@ function EmployeDashboard() {
         <TableColumn>VIEW APPLICATION</TableColumn>
 
       </TableHeader>
-      <TableBody>
+    
+        <TableBody>
+        
         {allListing?.map((list,index)=>{
             return   <TableRow key={index}>
             <TableCell>{list?.profile}</TableCell>
@@ -75,6 +83,9 @@ function EmployeDashboard() {
       
       
       </TableBody>
+     
+
+     
     </Table>
         </div>
         
