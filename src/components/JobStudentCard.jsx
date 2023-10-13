@@ -12,7 +12,7 @@ export default function JobStudentCard({dets}) {
 
 
   return (
-    <Card className=" border rounded-sm min-w-[470px] ml-4">
+    <Card className=" border rounded-sm md:min-w-[470px] md:mx-auto min-w-full">
       <CardHeader className="flex gap-3">
         <Image
           alt="nextui logo"
