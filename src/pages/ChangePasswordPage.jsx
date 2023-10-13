@@ -16,6 +16,7 @@ import {
 } from "@nextui-org/react";
 import axios from "../../utils/axios";
 import { toast } from "react-toastify";
+import Nav from '../components/Nav'
 
 export default function ChangePasswordPage() {
   const navigate = useNavigate();
@@ -66,8 +67,10 @@ export default function ChangePasswordPage() {
   };
 
   return (
+    <div>
+      <Nav/>
     <div className=" flex justify-center w-[100%] h-[100vh] items-center">
-      <Card className="min-w-[400px]">
+      <Card className="md:min-w-[400px] min-w-[380px]">
         <CardHeader className="flex gap-3">
           <h1>Make sure you remember next time</h1>
         </CardHeader>
@@ -101,5 +104,7 @@ export default function ChangePasswordPage() {
         </CardFooter>
       </Card>
     </div>
+    </div>
+
   );
 }

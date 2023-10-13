@@ -94,10 +94,10 @@ function Resume() {
       {loading ? (
         <Loading />
       ) : (
-        <div className="w-8/12 min-h-[100vh] mt-[3vw] p-4 mx-auto">
+        <div className="md:w-8/12 min-h-[100vh] mt-[3vw] p-4 mx-auto">
           <h1 className="text-2xl font-semibold text-center">Resume</h1>
 
-          <div className="w-8/12 px-10 pt-10 mt-4 mx-auto min-h-[100vh] border rounded-md">
+          <div className="md:w-8/12  px-10 pt-10 mt-4 mx-auto min-h-[100vh] border rounded-md ">
             <div className="border-b-1 pb-2">
               <div className="flex space-x-3 items-center">
                 <h1 className="text-3xl font-semibold">{`${userData?.firstName} ${userData?.lastName}`}</h1>

@@ -96,7 +96,7 @@ export default function App({ dets, setdets ,fetchUserData,fetchResumeDetails}) 
                 isOpen={isOpen}
                 onOpenChange={onOpenChange}
                 placement="top-center"
-                className="  min-w-[500px] min-h-[400px]"
+                className="  md:min-w-[500px] min-h-[400px]"
             >
                 <ModalContent >
                     {(onClose) => (
