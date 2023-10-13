@@ -14,7 +14,7 @@ function EmployecreatejobIntern() {
         <div className=' w-[100%] min-h-[100vh] '>
             <Nav />
 
-            <div className='w-6/12 p-4 mt-6 mx-auto min-h-[110%] border bg-white mb-4'>
+            <div className='md:w-6/12 p-4 mt-6 mx-auto min-h-[110%] border bg-white mb-4'>
                 <div>
                     <div className='w-full'>
                         <h1>Opportunity Type</h1>

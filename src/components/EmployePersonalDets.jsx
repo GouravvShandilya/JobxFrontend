@@ -38,7 +38,7 @@ function EmployePersonalDets() {
     return (
         <div className=' mt-10'>
             <form onSubmit={handleSubmit}>
-            <div className='w-10/12 mx-auto p-10 bg-white border'>
+            <div className='md:w-10/12 mx-auto p-10 bg-white border'>
 
                 <div className='w-[full] h-[100px]  flex gap-8'>
                     <Input type="text" variant="underlined" label="First Name" onChange={handleChange} name="firstName" value={formData.firstName} />

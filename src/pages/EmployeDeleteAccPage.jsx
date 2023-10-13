@@ -30,7 +30,7 @@ function DeleteAccountPage() {
       <Nav/>
       <div className='w-[100vw] h-[100vh] flex justify-center items-center '>
 
-      <div className=' w-[20%] flex flex-col gap-4'>
+      <div className='w-[80%] md:w-[20%] flex flex-col gap-4'>
           
             <Input
               autoFocus

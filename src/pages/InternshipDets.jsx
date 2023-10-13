@@ -123,9 +123,9 @@ function InternshipDets() {
           </div>
 
             <h1 className=' font-semibold'>Skills:</h1>
-          <div className=' flex gap-6 items-center'>
+          <div className=' flex gap-6 items-center flex-wrap'>
               {skills.map((skill)=>{
-                return <div className=' px-6 py-1  bg-[#d6d5d5] rounded-lg flex justify-center items-center '>
+                return <div className=' px-6 py-1  bg-[#ebe8e8] rounded-lg flex justify-center items-center '>
                   {skill}
                 </div>
               })

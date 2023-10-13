@@ -62,7 +62,7 @@ function EmployeRegisterPage() {
             <div className=' mt-10 '>
 
                 <div>
-                    <h1 className='text-[2.4vw] text-center font-bold'>Sign-up and Hire</h1>
+                    <h1 className='md:text-[2.4vw] text-2xl text-center font-bold'>Sign-up and Hire</h1>
                     <h3 className='text-xl text-center mt-2 mb-3'>1,50,000+ companies hiring on Find<span className='text-yellow-400'>X</span></h3>
                 </div>
                 <div className='w-[600px]  ml-[180px]  p-4'>

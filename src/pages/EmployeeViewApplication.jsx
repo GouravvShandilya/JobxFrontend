@@ -42,7 +42,7 @@ function EmployeeViewApplication() {
   return (
     <div className=' min-h-[100vh] bg-cover bg-[url(https://internshala.com/static/images/registration/student_new/background.png)]'>
       <Nav />
-      <div className=' w-6/12 mx-auto mt-10'>
+      <div className=' md:w-6/12 mx-auto mt-10'>
 
         <Table aria-label="Example static collection table">
           <TableHeader>

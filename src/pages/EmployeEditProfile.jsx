@@ -17,7 +17,7 @@ function EmployeEditProfile() {
   return (
     <div className='w-[100%] min-h-[100vh] '>
         <Nav/>
-        <div className='w-6/12 mx-auto mt-4 min-h-[70vh] '>
+        <div className='md:w-6/12 mx-auto mt-4 min-h-[70vh] '>
             <div className='w-[100%]  flex gap-4 p-4 items-center justify-center'>
                 <button onClick={handlePersonalDetails}>Personal Details</button>
                 <button onClick={handleOrgDetails}>organization Details</button>

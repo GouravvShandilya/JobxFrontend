@@ -31,7 +31,7 @@ function EmployeDashboard() {
   return (
     <div className=' min-h-[100vh] bg-cover bg-[url(https://internshala.com/static/images/registration/student_new/background.png)]'>
         <Nav/>
-        <div className=' w-8/12 mx-auto'>
+        <div className=' md:w-8/12 mx-auto'>
         <Table aria-label="Example static collection table">
       <TableHeader>
         <TableColumn>ROLE</TableColumn>

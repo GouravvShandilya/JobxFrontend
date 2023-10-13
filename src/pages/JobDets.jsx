@@ -39,7 +39,7 @@ function JobDets() {
   return (
     <div>
       <Nav />
-      <div className=' w-6/12   mx-auto p-4 mt-4 border'>
+      <div className=' md:w-6/12  w-11/12  mx-auto p-4 mt-4 border'>
         <div className='heading w-full min-h-[200px]  border-b'>
           <div className=' flex items-center justify-between'>
           <div>
@@ -74,7 +74,7 @@ function JobDets() {
 
           </div>
         </div>
-        <div className=' space-y-2 mt-4'>
+        <div className=' space-y-2 mt-4 break-words'>
           <div>
 
           <h1 className=' font-semibold mt-4'>About {jobDets?.createdBy?.organizationname}</h1>
@@ -82,7 +82,7 @@ function JobDets() {
           </div>
           <div className=' mt-10'>
             <h1 className=' font-semibold'>About the job</h1>
-            <p className=' mb-3'>Responsibilities:</p>
+            <p className=' mb-3'>Responsibilities</p>
             <h1 className='opacity-80'>{jobDets?.responsibility}</h1>
           </div>
           <div>
@@ -92,9 +92,9 @@ function JobDets() {
           </div>
 
             <h1 className=' font-semibold'>Skills:</h1>
-          <div className=' flex gap-6 items-center'>
+          <div className=' flex gap-6 items-center flex-wrap'>
               {skills.map((skill)=>{
-                return <div className=' px-6 py-1  bg-[#d6d5d5] rounded-lg flex justify-center items-center '>
+                return <div className=' px-6 py-1  bg-[#ebe8e8] rounded-lg flex justify-center items-center '>
                   {skill}
                 </div>
               })

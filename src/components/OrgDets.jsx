@@ -58,11 +58,11 @@ function OrgDets() {
     return (
         <div className=' mt-10'>
             
-                <div className='w-10/12 mx-auto p-10 bg-white border'>
+                <div className='md:w-10/12 mx-auto p-10 bg-white border'>
                     <Input type="text"  variant="underlined" label="Name" onChange={handleChange} name="firstName" disabled value={`${formData.firstName} ${formData.lastName}`} />
-                    <div className=' flex items-center gap-10'>
+                    <div className=' flex md:flex-row flex-col items-center gap-10'>
                     <Input type='file' onChange={handleChangeProfile} className='mt-4' width={50} variant='underlined' name='organizationlogo'/>
-                    <button onClick={handleProfileSubmit} className=' bg-[#008BDC]   text-white p-2 whitespace-nowrap'>set Profilepic</button>
+                    <button onClick={handleProfileSubmit} className=' bg-[#008BDC]   text-white p-2 w-full  whitespace-nowrap'>set profilepic</button>
 
                     </div>
                     <Textarea className=' mt-6'  label="About yourself and what you do" onChange={handleChange} name="organizationdescripion"/>

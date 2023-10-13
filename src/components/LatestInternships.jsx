@@ -47,7 +47,7 @@ function LatestInternships() {
                     modules={[Navigation, Pagination, Scrollbar, A11y,Autoplay]}
                     spaceBetween={80}
                     slidesPerView={3}
-                    navigation={true}   
+                    // navigation={true}   
                     // scrollbar={true}
                     pagination={{ clickable: true }}
                     className="mySwiper  md:p-10 w-full md:w-10/12 "
@@ -88,7 +88,7 @@ function LatestInternships() {
                     modules={[Navigation, Pagination, Scrollbar, A11y,Autoplay]}
                     spaceBetween={80}
                     slidesPerView={1}
-                    navigation={true}   
+                    // navigation={true}   
                     // scrollbar={true}
                     pagination={{ clickable: true }}
                     className="mySwiper  md:p-10 w-full md:w-10/12"
