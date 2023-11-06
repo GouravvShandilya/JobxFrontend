@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-    baseURL: 'https://nutty-fox-leather-jacket.cyclic.app/',
+    baseURL: 'http://nutty-fox-leather-jacket.cyclic.app/',
     withCredentials: true,
     
   });
